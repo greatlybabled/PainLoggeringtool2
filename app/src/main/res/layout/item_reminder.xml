@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/reminder_title_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        tools:text="Morning Pain Log" />
+
+    <TextView
+        android:id="@+id/reminder_config_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="08:00, 12:00" />
+
+    <!-- Add buttons here for delete, toggle, etc. if needed -->
+
+</LinearLayout>

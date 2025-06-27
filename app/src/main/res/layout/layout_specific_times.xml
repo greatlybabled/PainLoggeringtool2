@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/specific_times_label"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Container for the list of added times -->
+    <!-- We'll add time entries here programmatically -->
+    <LinearLayout
+        android:id="@+id/specificTimesListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAddSpecificTime"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_time"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/repeat_days_label"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Day Selection UI (Placeholder for now) -->
+    <!-- We'll implement this in a later sub-step -->
+    <TextView
+        android:id="@+id/daySelectionPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="[ Day Selection UI goes here ]"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="?attr/colorSurfaceVariant"/>
+
+
+</LinearLayout>

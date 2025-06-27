@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.painlogger.fragments.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.painlogger.fragments.SettingsFragment"
+        android:label="Settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_bodyPartsEditorFragment"
+            app:destination="@id/bodyPartsEditorFragment" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/bodyPartsEditorFragment"
+        android:name="com.example.painlogger.fragments.BodyPartsEditorFragment"
+        android:label="Edit Body Parts" />
+</navigation>

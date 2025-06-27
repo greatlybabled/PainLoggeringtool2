@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>settings.gradle.kts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+settings.gradle.kts</font>
+</center></td></tr></table>
+<pre><span class="s0">// settings.gradle.kts</span>
+
+<span class="s1">pluginManagement </span><span class="s2">{</span>
+    <span class="s1">repositories </span><span class="s2">{</span>
+        <span class="s1">gradlePluginPortal</span><span class="s2">()   </span><span class="s0">// for plugins :contentReference[oaicite:0]{index=0}</span>
+        <span class="s1">google</span><span class="s2">()               </span><span class="s0">// Android Gradle Plugin, Hilt :contentReference[oaicite:1]{index=1}</span>
+        <span class="s1">mavenCentral</span><span class="s2">()         </span><span class="s0">// community plugins :contentReference[oaicite:2]{index=2}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s1">dependencyResolutionManagement </span><span class="s2">{</span>
+    <span class="s1">repositoriesMode</span><span class="s2">.</span><span class="s1">set</span><span class="s2">(</span><span class="s1">RepositoriesMode</span><span class="s2">.</span><span class="s1">FAIL_ON_PROJECT_REPOS</span><span class="s2">)</span>
+    <span class="s1">repositories </span><span class="s2">{</span>
+        <span class="s1">google</span><span class="s2">()              </span><span class="s0">// AndroidX artifacts :contentReference[oaicite:3]{index=3}</span>
+        <span class="s1">mavenCentral</span><span class="s2">()        </span><span class="s0">// all other libs :contentReference[oaicite:4]{index=4}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+
+<span class="s1">rootProject</span><span class="s2">.</span><span class="s1">name </span><span class="s2">= </span><span class="s3">&quot;Pain Logger&quot;</span>
+<span class="s1">include</span><span class="s2">(</span><span class="s3">&quot;:app&quot;</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PainLogger"
 include(":app")
+include(":Painloggerwatch")

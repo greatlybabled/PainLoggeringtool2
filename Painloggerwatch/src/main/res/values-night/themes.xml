@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme for night mode -->
+    <style name="Theme.PainLogger" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand colors -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <!-- Use framework white for on-primary text/icons -->
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Secondary accent colors -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+
+        <!-- Surface and background colors -->
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorOutline">@color/colorOutline</item>
+    </style>
+    
+    <!-- Custom time picker theme that ensures text is visible in dark mode -->
+    <style name="CustomTimePickerTheme" parent="@style/ThemeOverlay.MaterialComponents.TimePicker">
+        <!-- Ensure text is visible in dark mode -->
+        <item name="colorOnSurface">@android:color/white</item>
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorOnSecondary">@android:color/black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+    </style>
+</resources>

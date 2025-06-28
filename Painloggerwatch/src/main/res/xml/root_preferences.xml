@@ -1,0 +1,101 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Appearance Section -->
+    <PreferenceCategory
+        app:title="@string/pref_header_appearance">
+
+        <SwitchPreferenceCompat
+            app:key="dark_theme"
+            app:title="@string/pref_title_dark_theme"
+            app:summary="@string/pref_summary_dark_theme"
+            app:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <!-- Detailed Logging Section -->
+    <PreferenceCategory
+        app:title="@string/pref_header_detailed_logging">
+
+        <SwitchPreferenceCompat
+            app:key="detailed_logging_toggle"
+            app:title="@string/pref_title_enable_detailed_reminders"
+            app:summary="@string/pref_summary_enable_detailed_reminders"
+            app:defaultValue="false"/>
+
+        <!-- Placeholder for the "+ Add Detailed Reminder" button -->
+        <Preference
+            app:key="add_detailed_reminder"
+            app:title="@string/pref_title_add_detailed_reminder"
+            app:summary="@string/pref_summary_add_detailed_reminder"
+            app:icon="@android:drawable/ic_menu_add"
+            app:enabled="false"  /> <!-- Start disabled, enable when toggle is ON -->
+
+        <!-- PreferenceCategory to dynamically add detailed reminders -->
+        <PreferenceCategory
+            app:key="detailed_reminders_list"
+            app:title="@string/pref_title_detailed_reminders_list"
+            app:initialExpandedChildrenCount="0"
+            app:persistent="false" /> <!-- Set persistent to false as we manage children dynamically -->
+
+
+    </PreferenceCategory>
+
+    <!-- General Logging Section -->
+    <PreferenceCategory
+        app:title="@string/pref_header_general_logging">
+
+        <SwitchPreferenceCompat
+            app:key="general_logging_toggle"
+            app:title="@string/pref_title_enable_general_reminders"
+            app:summary="@string/pref_summary_enable_general_reminders"
+            app:defaultValue="false"/>
+
+        <!-- Placeholder for the "+ Add General Reminder" button -->
+        <Preference
+            app:key="add_general_reminder"
+            app:title="@string/pref_title_add_general_reminder"
+            app:summary="@string/pref_summary_add_general_reminder"
+            app:icon="@android:drawable/ic_menu_add"
+            app:enabled="false" /> <!-- Start disabled, enable when toggle is ON -->
+
+        <!-- PreferenceCategory to dynamically add general reminders -->
+        <PreferenceCategory
+            app:key="general_reminders_list"
+            app:title="@string/pref_title_general_reminders_list"
+            app:initialExpandedChildrenCount="0"
+            app:persistent="false" /> <!-- Set persistent to false as we manage children dynamically -->
+
+        <!-- Existing interval preference, will be removed later or repurposed -->
+        <!-- For now, keep it but know it will be handled differently -->
+        <!-- Removed dependencies on the old toggle as new reminders handle this -->
+        <EditTextPreference
+            app:key="interval_reminder_minutes"
+            app:title="@string/pref_title_interval_reminder"
+            app:defaultValue="60"
+            android:inputType="numberDecimal"  /> <!-- Use android:inputType="numberDecimal" for numerical input -->
+        app:singleLine="true"
+        app:summary="%s minutes"
+        app:dialogTitle="@string/pref_title_interval_reminder"
+        />
+
+        <!-- Existing daily reminder preference, will be removed later or repurposed -->
+        <!-- For now, keep it but know it will be handled differently -->
+        <!-- Removed dependencies on the old toggle as new reminders handle this -->
+        <Preference
+            app:key="daily_reminder_time"
+            app:title="@string/pref_title_daily_reminder"
+            app:summary="Not set"
+            />
+
+
+    </PreferenceCategory>
+
+    <!-- You can add an "About" section here later if desired -->
+    <PreferenceCategory
+        app:title="@string/pref_header_about">
+        <!-- Add preferences for app version, etc. -->
+    </PreferenceCategory>
+
+</PreferenceScreen>
